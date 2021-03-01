@@ -1,5 +1,5 @@
 const getBreeds = async () => {
-  const url = "https://api.thedogapi.com/v1/breeds123321/";
+  const url = "https://api.thedogapi.com/v1/breeds/";
   const res = await fetch(url);
 
   if(!res.ok) {
