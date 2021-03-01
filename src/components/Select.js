@@ -14,6 +14,7 @@ const initialBreeds = [
 
 const Select = ({ updateDog }) => {
   const [breeds, setBreeds] = useState(initialBreeds);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     updateBreeds();
@@ -23,6 +24,10 @@ const Select = ({ updateDog }) => {
     getBreeds()
         .then((newBreeds) => {
           setBreeds(newBreeds);
+        })
+        .catch((error) => {
+          console.log(error);
+          setError("Error al cargar las razas");
         })
   }
 

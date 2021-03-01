@@ -1,6 +1,9 @@
 import React from 'react';
+import Spinner from './Spinner';
 
-const Card = ({ dog, updateDog }) => {
+const Card = ({ dog, loading, updateDog  }) => {
+
+  if(loading) return <Spinner />
   return (
     <div className="card" onClick={() => updateDog(dog.breed.id)}>
       <img 
