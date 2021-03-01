@@ -47,7 +47,6 @@ select {
   cursor: pointer;
   transition: transform .1s;
   max-width: 320px;
-
 }
 
 .card:hover {

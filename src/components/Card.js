@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Card = () => {
+const Card = ({ dog, updateDog }) => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => updateDog(dog.breed.id)}>
       <img 
-        src="https://wipy.tv/wp-content/uploads/2019/01/Muri%C3%B3-el-perrito-m%C3%A1s-famosos-de-internet-2.jpg"
+        src={dog.image}
         alt="dog"
       />
       <p>
-        Breed
+        {dog.breed.name}
       </p>
     </div>
   )
